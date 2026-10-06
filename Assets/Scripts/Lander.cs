@@ -1,4 +1,3 @@
-using System.Numerics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -30,5 +29,46 @@ public class Lander : MonoBehaviour
             float turnSpeed = -100f;
             rbLander2D.AddTorque(turnSpeed * Time.deltaTime);
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision2D)
+    {
+        //çarpışma nesnesi kontrolü
+        if (!collision2D.gameObject.TryGetComponent<LandingPad>(out LandingPad landingPad))
+        {
+            Debug.Log("Crashed!");
+            return;
+        }
+
+        //bağıl hız kontrolü
+        float softLandingVelocitySpeed = 4f;
+        float relativeVelocityMagnitude = collision2D.relativeVelocity.magnitude;
+
+        if(relativeVelocityMagnitude > softLandingVelocitySpeed)
+        {
+            Debug.Log("Landed too hard!");
+            return;
+        }
+
+        //iniş açısı kontrolü
+        float dotVector = Vector2.Dot(Vector2.up, transform.up);
+        float minDotVector = .9f;
+        if(dotVector < minDotVector)
+        {
+            Debug.Log("Bad landing angle!");
+            return;
+        }
+
+        Debug.Log("Successfull Landing!");
+
+        float maxScoreAmountLandingAngle = 100f;
+        float scoreDotVectorMultiplier =  10f;
+        float landingAngleScore = maxScoreAmountLandingAngle - Mathf.Abs(dotVector - 1f) * scoreDotVectorMultiplier * maxScoreAmountLandingAngle;
+        
+        float maxScoreAmountLandingSpeed = 100f;
+        float landingSpeedScore = (softLandingVelocitySpeed - relativeVelocityMagnitude) * maxScoreAmountLandingSpeed;
+
+        Debug.Log("landingAngleScore: " + landingAngleScore);
+        Debug.Log("landingSpeedScore: " + landingSpeedScore);
     }
 }
