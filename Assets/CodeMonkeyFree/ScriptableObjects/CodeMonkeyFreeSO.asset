@@ -14,41 +14,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.00
   subtype: lunarLanderFree
-  lastShownTimestamp: 1791284322
+  lastShownTimestamp: 1791457679
   lastUpdateResponse:
     version: 1.00
     versionUrl: https://unitycodemonkey.com
-  checkedLastUpdateTimestamp: 1791284322
+  checkedLastUpdateTimestamp: 1791457679
   lastQOTDResponse:
-    questionId: 349
-    questionText: Can Color ever be null?
-    answerA: Yes, always
-    answerB: No
-    answerC: Yes, as Nullable
+    questionId: 350
+    questionText: 'What is the value stored in percentage?
+
+      <p>int health =
+      25;</p>
+
+      <p>int healthMax = 100;</p>
+
+      <p>float percentage = health
+      / healthMax;</p>'
+    answerA: 0.25f
+    answerB: 0
+    answerC: 2.5f
     answerD: 
     answerE: 
-  lastQotdTimestamp: 1791284322
+  lastQotdTimestamp: 1791457679
   lastDynamicHeaderResponse:
-    topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/codeMonkeyToolkit50Off.png
-    topText: My Toolkit is 50% OFF! 50+ Tools and Elements to help you make games
-      BETTER and FASTER!
-    topLink: toolkit
-    bottomText: Escape Tutorial Hell and level up your skills, try my Practice Lab
-      for FREE!
-    bottomLink: practicelab
-  lastDynamicHeaderTimestamp: 1791284322
+    topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/humbleSep26Synty.png
+    topText: AWESOME Synty Asset with THOUSANDS of great assets!
+    topLink: humblebundle
+    bottomText: My 10+ Years of C# Knowledge in 1 Course!
+    bottomLink: csharpcourse
+  lastDynamicHeaderTimestamp: 1791457679
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/freecourses">Check out all my FREE courses!
       Click here!</a>
-  websiteLatestMessageTimestamp: 1791284322
+  websiteLatestMessageTimestamp: 1791457679
   websiteLatestVideos:
     videos:
+    - youTubeId: trDO2Io6D2M
+      title: What is Unity Spark?
     - youTubeId: iwDBrvKliV8
       title: You should do the Dual Prototyping Strategy!
     - youTubeId: mQTcWsiP9nA
       title: Does 1000 Wishlists at announcement mean $1,000,000?
     - youTubeId: TPNjjCOjxB4
       title: How to Change Unity Graphics Settings Through Code! (Unity Tutorial)
-    - youTubeId: sA8mwU_-OXc
-      title: BEST NEW Visual Assets to INSPIRE YOU! (SEPTEMBER 2026)
-  websiteLatestVideosTimestamp: 1791284322
+  websiteLatestVideosTimestamp: 1791457679
